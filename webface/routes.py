@@ -4,10 +4,8 @@ import functools
 
 # from werkzeug.security import check_password_hash
 
-slova = ("Super", "Perfekt", "Úža", "Flask")
 
-
-def prihlasit(function):
+def login_required(function):
     @functools.wraps(function)
     def wrapper(*args, **kwargs):
         if "user" in session:
@@ -23,22 +21,21 @@ def index():
     return render_template("base.html.j2")
 
 
-@app.route("/info/")
-def info():
-    return render_template("info.html.j2")
+@app.route("/<string:shortcut>", methods=["GET"])
+def short_redirect(shortcut):
+    return render_template("base.html.j2")
 
 
-@app.route("/abc/")
-def abc():
-    return render_template("abc.html.j2", slova=slova)
+@app.route("/adduser/")
+def adduser():
+    return render_template("base.html.j2")
 
 
-@app.route("/text/")
-def text():
-    return """
+@app.route("/login/")
+def login():
+    return render_template("login.html.j2")
 
-<h1>Text</h1>
 
-<p>toto je text</p>
-
-"""
+@app.route("/logout/")
+def logout():
+    return render_template("base.html.j2")

@@ -1,13 +1,19 @@
-Start Flask
+Zkracovač URL
 =========================
 
-[flask]: https://flask.palletsprojects.com
+Vytvořte aplikaci podobnou <http://jdem.cz/> nebo <https://cutt.ly/>,
+která bude:
 
-Tento repositář má vám (i mě) usnadnit založení nového projektu
-s frameworkem [Flask][].
+1. zkracovat zadané URL
+2. při zadání zkratky provede přesměrování na původní URL
+3. přihlášeným uživatelům umožní výpis všech URL, které zkrátili
+
+
 
 Několik užitečných odkazů pro začátek
 ------------------------------------------
+
+[flask]: https://flask.palletsprojects.com
 
 * [Explore Flask](https://exploreflask.com/)
 * [The Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
