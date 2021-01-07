@@ -1,8 +1,7 @@
-Flask
 python-dotenv
-Flask-pony
+Flask
+pony
 #Flask-misaka
 #Flask-WTF
 #Flask-Login
 #Flask-mail
-#pony
